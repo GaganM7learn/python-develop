@@ -1,0 +1,5 @@
+print("STUDENT INFORMATION")
+print("Name: Gagan")
+print("Age:19")
+print("Course: Python")
+print("Goal: Pyhton Developer")
