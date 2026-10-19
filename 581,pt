@@ -1,0 +1,4 @@
+temperatures = [32, 18, 27, 41, 23]
+highest_first = sorted(temperatures , reverse = True)
+
+print(highest_first)
