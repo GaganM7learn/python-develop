@@ -1,0 +1,4 @@
+Roses are red
+Violets are blue
+Python is fun
+Coding is cool

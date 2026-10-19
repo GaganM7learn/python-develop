@@ -1,0 +1,2 @@
+Today I am learned loops
+ Tomorrow I will learn functions
