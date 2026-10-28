@@ -23,20 +23,27 @@ result2 = tk.Label(root , text = "Per Person: ")
 result2.pack(pady=5) 
 
 def calculate_function():
-    bill = float(entry1.get())
-    tip_percent = float(entry2.get())
-    people = float(entry3.get())
+    try :
+        
+        bill = float(entry1.get())
+        tip_percent = float(entry2.get())
+        people = float(entry3.get())
 
-    if not bill >= 0 or tip_percent >= 0 or people >= 0 :
-        result1.config(text = "Enter a Valid bill or tip or tax")
+        if not bill >= 0 or tip_percent >= 0 or people >= 0 :
+           result1.config(text = "Enter a Valid bill or tip or tax")
+           result2.config(text = "")
+
+        tip_amount = bill * tip_percent / 100
+        total = bill + tip_amount
+        share = total / people
+        result1.config(text = f"Total Bill: {total:.2f}")
+        result2.config(text = f'Per person: {share:.2f}')
+
+    except ValueError :
+        result1.config(text = "please enter a valid numbers")
         result2.config(text = "")
 
-    tip_amount = bill * tip_percent / 100
-    total = bill + tip_amount
-    share = total / people
-    result1.config(text = f"Total Bill: {total:.2f}")
-    result2.config(text = f'Per person: {share:.2f}')
-     
+
 
 button = tk.Button(
     root ,

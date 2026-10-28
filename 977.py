@@ -24,7 +24,6 @@ def calculate_bmi():
     try :
         weight = float(entry1.get())
         height = float(entry2.get())
-        bmi = weight / (height**2)
         if weight <= 0 or height <= 0 :
             result1.config(text = "Please enter a valid number weight or height cannot be zero or lesser than zero ")
 

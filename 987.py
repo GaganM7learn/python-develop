@@ -1,5 +1,6 @@
 import tkinter as tk
 from datetime import datetime
+## me
 
 root = tk.Tk()
 root.title("Age and Birth-Year Checker")
@@ -24,6 +25,7 @@ def calculate_function():
         if birth_year <=0 or birth_year > current_year :
             result1.config(text = "Enter a valid birth year")
             result2.config(text = "")
+            return
 
         age = current_year - birth_year
         result1.config(text = f"Result: {age:.2f}")

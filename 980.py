@@ -1,5 +1,6 @@
 import tkinter as tk
 
+## me
 root = tk.Tk()
 root.title("Shopping Discount Calculator")
 root.geometry("400x350")
