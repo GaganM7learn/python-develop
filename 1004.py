@@ -1,25 +1,6 @@
-import tkinter as tk
-from time import strftime
+birth_year = int(input("Enter your birth year:"))
+current_year = 2026
 
-root = tk.Tk()
-root.title("Countdown Timer")
-root.geometry("350x150")
+age = current_year - birth_year
 
-
-clock_label = tk.Label(
-    root , 
-    font = ("Arial" , 35) , 
-    background = "black" , 
-    foreground = "white"
-)
-clock_label.pack(anchor = "center" , pady=30)
-
-def update_clock():
-    current_time = strftime("%H:%M:%S")
-    clock_label.config(text = current_time)
-
-    root.after(1000 , update_clock)
-
-update_clock()
-
-root.mainloop()
+print("Your age is:", age)
